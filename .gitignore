@@ -1,0 +1,4 @@
+dclist.a
+objs
+*.o
+*.d
