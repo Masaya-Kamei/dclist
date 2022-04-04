@@ -1,4 +1,4 @@
-dclist.a
+*.a
 objs
 *.o
 *.d

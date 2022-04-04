@@ -8,7 +8,7 @@ OBJSDIR	=	./objs
 OBJS	=	$(addprefix $(OBJSDIR)/, $(SRCS:.c=.o))
 
 INCLUDE	=	-I./includes
-NAME	=	dclist.a
+NAME	=	libdclist.a
 
 CC		=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
