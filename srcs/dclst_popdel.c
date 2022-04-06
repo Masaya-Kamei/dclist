@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dclst_pop_del.c                                    :+:      :+:    :+:   */
+/*   dclst_popdel.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 10:21:30 by mkamei            #+#    #+#             */
-/*   Updated: 2022/04/05 10:27:22 by mkamei           ###   ########.fr       */
+/*   Updated: 2022/04/06 11:58:22 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dclist.h"
 
-void	dclst_pop_del(t_dclist *lst, void (*del)(void *))
+void	dclst_popdel(t_dclist *lst, void (*del)(void *))
 {
 	if (lst == NULL)
 		return ;
