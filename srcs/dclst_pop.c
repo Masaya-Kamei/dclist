@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dclst_size.c                                       :+:      :+:    :+:   */
+/*   dclst_pop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 16:44:28 by mkamei            #+#    #+#             */
-/*   Updated: 2022/04/05 14:05:25 by mkamei           ###   ########.fr       */
+/*   Created: 2022/04/05 10:22:38 by mkamei            #+#    #+#             */
+/*   Updated: 2022/04/05 10:25:58 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dclist.h"
 
-size_t	dclst_size(t_dclist *lst)
+t_dclist	*dclst_pop(t_dclist *lst)
 {
-	const t_dclist	*sentinel = lst;
-	size_t			size;
-
-	size = 0;
-	lst = lst->next;
-	while (lst != sentinel)
-	{
-		size++;
-		lst = lst->next;
-	}
-	return (size);
+	dclst_link(lst->prev, lst->next);
+	lst->prev = lst;
+	lst->next = lst;
+	return (lst);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dclist.h                                            :+:      :+:    :+:   */
+/*   dclist.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 13:54:38 by mkamei            #+#    #+#             */
-/*   Updated: 2022/04/04 13:54:38 by mkamei           ###   ########.fr       */
+/*   Created: 2022/04/06 10:08:29 by mkamei            #+#    #+#             */
+/*   Updated: 2022/04/06 10:08:31 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,11 @@ t_dclist	*dclst_new_addback(t_dclist *lst, void *p);
 t_dclist	*dclst_new_addfront(t_dclist *lst, void *p);
 bool		dclst_exist(t_dclist *lst);
 void		dclst_link(t_dclist *front, t_dclist *back);
+t_dclist	*dclst_new_size(size_t size);
+t_dclist	*dclst_first(t_dclist *lst);
+bool		dclst_is_sentinel(t_dclist *lst, t_dclist *target);
+t_dclist	*dclst_pop(t_dclist *lst);
+void		dclst_pop_del(t_dclist *lst, void (*del)(void *));
+t_dclist	*dclst_pop_del_next(t_dclist *lst, void (*del)(void *));
 
 #endif

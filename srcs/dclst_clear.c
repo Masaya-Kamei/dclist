@@ -6,7 +6,7 @@
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:27:27 by mkamei            #+#    #+#             */
-/*   Updated: 2022/04/04 14:48:33 by mkamei           ###   ########.fr       */
+/*   Updated: 2022/04/05 13:05:25 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	dclst_clear(t_dclist **lst, void (*del)(void *))
 		dclst_delone(current, del);
 		current = next;
 	}
-	free(sentinel);
+	dclst_delone(sentinel, del);
 	*lst = NULL;
 }

@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dclst_size.c                                       :+:      :+:    :+:   */
+/*   dclst_pop_del.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkamei <mkamei@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 16:44:28 by mkamei            #+#    #+#             */
-/*   Updated: 2022/04/05 14:05:25 by mkamei           ###   ########.fr       */
+/*   Created: 2022/04/05 10:21:30 by mkamei            #+#    #+#             */
+/*   Updated: 2022/04/05 10:27:22 by mkamei           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dclist.h"
 
-size_t	dclst_size(t_dclist *lst)
+void	dclst_pop_del(t_dclist *lst, void (*del)(void *))
 {
-	const t_dclist	*sentinel = lst;
-	size_t			size;
-
-	size = 0;
-	lst = lst->next;
-	while (lst != sentinel)
-	{
-		size++;
-		lst = lst->next;
-	}
-	return (size);
+	if (lst == NULL)
+		return ;
+	dclst_pop(lst);
+	dclst_delone(lst, del);
 }

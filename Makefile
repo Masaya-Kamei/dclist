@@ -2,7 +2,9 @@ vpath	%.c srcs
 
 SRCS	=	dclst_addback.c dclst_addfront.c dclst_clear.c dclst_delone.c \
 			dclst_exist.c dclst_last.c dclst_link.c dclst_new.c \
-			dclst_new_addback.c dclst_new_addfront.c dclst_size.c
+			dclst_new_size.c dclst_new_addback.c dclst_new_addfront.c \
+			dclst_size.c dclst_first.c dclst_is_sentinel.c dclst_pop.c \
+			dclst_pop_del.c dclst_pop_del_next.c
 
 OBJSDIR	=	./objs
 OBJS	=	$(addprefix $(OBJSDIR)/, $(SRCS:.c=.o))
